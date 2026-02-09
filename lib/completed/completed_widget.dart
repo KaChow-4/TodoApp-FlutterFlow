@@ -176,7 +176,7 @@ class _CompletedWidgetState extends State<CompletedWidget> {
                                 checkAction: () async {
                                   await listViewTasksRecord.reference
                                       .update(createTasksRecordData(
-                                    comleted: true,
+                                    comleted: false,
                                   ));
                                 },
                               );
