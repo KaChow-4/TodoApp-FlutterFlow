@@ -1,4 +1,5 @@
 import '/auth/firebase_auth/auth_util.dart';
+import '/backend/api_requests/api_calls.dart';
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -1053,8 +1054,12 @@ class _LoginWidgetState extends State<LoginWidget>
                                 return;
                               }
 
+                              _model.apiResultzqh = await HelloWorldCall.call();
+
                               context.goNamedAuth(
                                   TasksWidget.routeName, context.mounted);
+
+                              safeSetState(() {});
                             },
                             text: 'Login',
                             options: FFButtonOptions(
